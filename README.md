@@ -1,1 +1,1 @@
-# Szimulációs projektmunka - fogolydilemma
+# Választási rendszerek - szimulációs projektmunka
