@@ -37,6 +37,41 @@ Arányos rendszerek altípusai: pártlistás arányos választási rendszer (lis
         <td>többen kerülnek ki győztesen</td>
     </tr>
 </table>
+
+<table>
+    <thead>
+        <tr>
+            <th style="text-align:center">típus</th>
+            <th style="text-align:center">jelentése</th>
+        </tr>
+    </thead>
+    <tr>
+        <th>egyfordulós</th>
+        <td>egy választási fordulóval választják ki a győztest</td>
+    </tr>
+    <tr>
+        <th>többfordulós</th>
+        <td>több választási fordulóval választják ki a győztest</td>
+    </tr>
+</table>
+
+#### Szavazólap alapján
+<table>
+    <thead>
+        <tr>
+            <th style="text-align:center">típus</th>
+            <th style="text-align:center">jelentése</th>
+        </tr>
+    </thead>
+    <tr>
+        <th style="text-align:center">egyszavazatos</th>
+        <td></td>
+    </tr>
+    <tr>
+        <th style="text-align:center">rangsorolásos</th>
+        <td>egy szavazó több jelöltre is leadhatja szavazatát, sorrendet felállítva</td>
+    </tr>
+</table>
 <br><br>
 
 

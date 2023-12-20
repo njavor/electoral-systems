@@ -1,3 +1,7 @@
+function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
+}
+
 class Voter{
     constructor(name, charisma, manners, apathy){
         this.name = name;
@@ -12,8 +16,9 @@ class Voter{
     }
 
 
-    vote(){
-
+    vote(system){
+        if(getRandomInt(this.apathy))
+        system.personalVote(this);
     }
 
 
