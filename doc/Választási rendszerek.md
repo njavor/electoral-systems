@@ -74,13 +74,35 @@ Arányos rendszerek altípusai: pártlistás arányos választási rendszer (lis
 </table>
 <br><br>
 
+## Különböző rendszerek áttekintése:
 
+
+
+## Választáselmélet
+egy kis lorem
+
+### Condorcet-paradoxon
 
 
 ## Többségi rendszerek
 
 ### Egyszerű többségi rendszer<br><sup style="color:gray">*First past the post (FPTP)*</sup>
 A ***relatív többségi szavazás***, más néven ***egyszerű többségi rendszer***, egy egymandátumos választási rendszer, ahol egy szavazó egy szavazatot adhat le. Győztessé a legtöbb szavazatott kapott jelölt válik (akár 50%> is).
+
+<table>
+    <tr>
+        <th>győztesek száma:</th>
+        <td>egy győztes</td>
+    </tr>
+    <tr>
+        <th>választási szabály:</th>
+        <td>relatív többségi</td>
+    </tr>
+    <tr>
+        <th>szavazólap típusa:</th>
+        <td>egy x-es</td>
+    </tr>
+</table>
 
 #### Pro-kontra:
 
@@ -186,8 +208,13 @@ A ***pártlistás blokkszavazás***, más néven ***listás többségi választ�
 
 
 
-
 ## Egyéb rendszerek
+
+
+
+
+
+## Források
 
 <br>
 <br>
