@@ -23,29 +23,44 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700;900&display=swap" rel="stylesheet">
 
 </head>
 <body>
     <main>
-        <img src="assets/.png" alt="" id="cim">
+        <section id="title">
+            <h1>vote something</h1>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            </p>
+        </section>
 
-        <svg id="canvas">
-        </svg>
+        <section id="parties">
+            <h3>Pártok</h3>
+            <form action="" method="post">
+                <label for="name">név</label>
+                <input type="text" name="name" id="name">
 
-        <svg id="p-compass">
+                <label for="">ideológia</label>
+                <input type="number" name="x" id="x">
+                <input type="number" name="y" id="y">
 
-        </svg>
+                <button type="submit">Új párt</button>
+            </form>
+            <div id="partylist"></div>
+        </section>
+        
+        <section id="candidates">
+            <h3>Egyéni jelöltek</h3>
+            
+            <div id="candidatelist"></div>
+        </section>
 
-        <div id="vote">
-            <h1>Új választás</h1>
-        </div>
+        <button id="vote">VÁLASSZUNK</button>
 
-        <div id="parties">
-            <button>új párt</button>
-            <button>új szavazó</button>
-        </div>
-
+        <section id="population">
+            <h3>Választók</h3>
+            <div id="populationlist"></div>
+        </section>
     </main>
     
     <footer>

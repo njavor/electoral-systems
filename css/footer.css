@@ -1,6 +1,6 @@
 footer{
-    margin-top: 10px;
-    height: 40px;
+    margin-block: 10px 5px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
