@@ -3,26 +3,33 @@ function getRandomInt(max) {
 }
 
 class Voter{
-    constructor(name, charisma, manners, apathy){
+    constructor(name, charisma, apathy, compass){
         this.name = name;
         this.charisma = charisma;
-        this.manners = manners;
-        this.apathy = apathy;
+        this.apathy = apathy; // 0 (nope) - 99 (biztos megy szavazni)
+
+        //beliefs
+        this.compass = compass; // [0-99,0-99] (0,0)=LeftLiber, (99,99)=AuthRight
     }
 
-    // létezés
+    
     deleteMe(){
         delete this;
     }
+    
 
 
-    vote(system){
-        if(getRandomInt(this.apathy))
-        system.personalVote(this);
+
+    party_preference(parties){
+        partylist = {};
+        for (party in parties){
+            partylist[party] = (Math.sqrt((party.compass[0]-this.compass[0])^2 + (party.compass[1]-this.compass[1])^2));
+        }
+        return partylist.sort(); // ??maybe reverse??
     }
 
-
-    static handshake(e,f){
+    
+    // static handshake(e,f){
         
-    }
+    // }
 }

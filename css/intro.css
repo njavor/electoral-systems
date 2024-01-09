@@ -13,3 +13,19 @@
     background-color: rgba(0 0 0 / .3);
     filter: blur(.4);
 }
+
+.modal[open]{
+    padding: 3rem;
+    height: calc(90svh - 6rem);
+    width: calc(90svw - 6rem);
+
+    display: grid;
+    grid-template-rows: fit-content(100%) 1fr fit-content(100%);
+    text-align: center;
+
+    border: 0;
+}
+.modal::backdrop{
+    background-color: rgba(0 0 0 / .3);
+    filter: blur(.4);
+}

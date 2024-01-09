@@ -16,52 +16,8 @@ body{
     font-family: 'Playpen Sans', cursive;
 }
 
-main{
-    padding: 1em 2em 0 4em;
-    width: calc(100% - 12em);
 
-    display: grid;
-    grid-template-areas:
-    'cim cim cim p-compass'
-    'canvas canvas canvas p-compass'
-    'canvas canvas canvas vote'
-    'parties parties parties parties'
-    ;
-    grid-template-rows: 50px 1fr 2fr 150px;
-    grid-template-columns: 25% 25% 25% 25%;
-
-    gap: 1rem;
+button{
+    background-color: var(--kek);
+    color: var(--feher);
 }
-
-main *:not(#cim){
-    width: 100%;
-    height: 100%;
-
-    border: 5px solid var(--fekete);
-    border-radius: 40px;
-}
-
-main #cim{
-    grid-area: cim;
-
-    height: 50px;
-    justify-self: center;
-}
-
-
-
-main #canvas{
-    grid-area: canvas;
-
-    background-color: var(--fekete);
-}
-main #p-compass{
-    grid-area: p-compass;
-}
-main #vote{
-    grid-area: vote;
-}
-main #parties{
-    grid-area: parties;
-}
-
