@@ -22,12 +22,13 @@ class Voter{
 
 
     preference(list){
-        let preferencelist = []
+        let preferencelist = [];
         for(i in list){
             preferencelist.push(0);
         }
 
         for (i in list){
+            console.log(list);
             preferencelist[i] = Math.abs(list[i].compass[0] - this.compass[0]) + Math.abs(list[i].compass[1] - this.compass[1]);
             // preferencelist[i] = Math.sqrt((list[i].compass[0]-this.compass[0])^2 + (list[i].compass[1]-this.compass[1])^2)
         }

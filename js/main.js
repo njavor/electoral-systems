@@ -44,6 +44,10 @@ function startSim(){
         element.appendChild(document.createTextNode(candidatesystems[i].constructor.name));
         element.setAttribute('id', candidatesystems[i].constructor.name)
         element.classList.add("system-button");
+        element.addEventListener("click", e => {
+            showRes(candidatesystems[i]);
+        })
+
 
         document.getElementById("reschange").appendChild(element);
     }
@@ -53,7 +57,7 @@ function startSim(){
 
 
 function showRes(system){
-    console.log("szia");
+    console.log("showRes run");
     resetContent();
 
     document.getElementById("rescontent");
@@ -62,8 +66,6 @@ function showRes(system){
     let buttons = document.querySelectorAll(".system-button");
     
     for(i in buttons){
-        console.log(i);
-        console.log(buttons[i]);
         if(buttons[i].id === system.constructor.name){
             buttons[i].classList.add("active");
         }
@@ -81,4 +83,17 @@ function resetContent(){
 
 let thebuttons = document.querySelectorAll(".system-button");
 console.log(thebuttons);
-thebuttons.forEach((e) => e.addEventListener("click", showRes(candidatesystems[1])));
+thebuttons.forEach((e) => e.addEventListener("click",e => {
+    console.log("szia");
+    (e.id === "FPTP") ? showRes(candidatesystems[0]) : showRes(candidatesystems[1]);
+}));
+
+FPTP.addEventListener("click",e => {
+    console.log("szia");
+    showRes(candidatesystems[0]);
+})
+
+TRS.addEventListener("click",e => {
+    console.log("szias");
+    showRes(candidatesystems[1]);
+})

@@ -35,7 +35,7 @@ function partyDeleteListener(party){
         element.remove();
 
         parties = parties.filter((e) => e.pk != party.pk);
-        console.log(parties);
+        // console.log(parties);
     })
 }
 
@@ -68,7 +68,7 @@ function candidateDeleteListener(candidate){
         element.remove();
 
         candidates = candidates.filter((e) => e.pk != candidate.pk);
-        console.log(candidates);
+        // console.log(candidates);
     })
 }
 
@@ -80,7 +80,7 @@ function addVotersDisplay(pop, i){
     element.classList.add("item");
 
     var text = document.createElement("p");
-    text.appendChild(document.createTextNode(`${pop.name}, apátia:${pop.apathy}, compass:(${pop.compass[0]},${pop.compass[1]}), fő:${i}`));
+    text.innerHTML = `<strong>${pop.name} (${pop.compass[0]},${pop.compass[1]})</strong> <br> apátia:${pop.apathy} <br> ${i} fő`;
 
     var delbutton = document.createElement("button");
     delbutton.setAttribute('id', `pop-${pop.pk}-delete`);
@@ -102,7 +102,7 @@ function votersDeleteListener(pop){
         element.remove();
 
         voters = voters.filter((e) => e.pk != pop.pk);
-        console.log(voters);
+        // console.log(voters);
     })
 }
 function votersDeleteListener(pop, i){
@@ -113,7 +113,7 @@ function votersDeleteListener(pop, i){
         element.remove();
 
         voters = voters.filter((e) => e.pk != pop.pk)
-        console.log(voters);
+        // console.log(voters);
     })
 }
 
@@ -153,7 +153,7 @@ function addParty(){
     partyDeleteListener(party);
 
 
-    console.log(parties);
+    // console.log(parties);
 }
 
 function addCandidate(){
@@ -165,7 +165,7 @@ function addCandidate(){
     candidateDeleteListener(candidate);
     
     
-    console.log(candidates);
+    // console.log(candidates);
 }
 
 function addVoters(){
@@ -179,5 +179,5 @@ function addVoters(){
     addVotersDisplay(person, voternumber.value);
     votersDeleteListener(person, voternumber.value);
 
-    console.log(voters);
+    // console.log(voters);
 }

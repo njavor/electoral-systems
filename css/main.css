@@ -10,7 +10,7 @@ main{
     'population population population'
     ;
 
-    grid-template-columns: 3fr 3fr 3fr;
+    grid-template-columns: 5fr 3fr 3fr;
     grid-template-rows: 6fr 4fr 7fr;
 
     gap: 0 2em;
@@ -23,16 +23,18 @@ main section{
 
 
 #title{
-    margin-left: 10em;
-
     grid-area: title;
     align-self: center;
 
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
     justify-content: center;
 
+    text-align: left;
+}
+#title h1, h4{
+    width: 100%;
     text-align: left;
 }
 #title h4{
@@ -48,7 +50,6 @@ main section{
     margin-block: 2em;
     grid-area: vote;
     justify-self: center;
-    
     
     height: min-content;
 }
@@ -72,12 +73,33 @@ main > button:hover{
     flex-direction: row;
     gap: 3em;
 }
+#population .list{
+    margin-top: 1em;
+    padding-bottom: .5em;
+    width: 1200px;
+    height: 128px;
+
+    display: flex;
+    gap: 2em;
+
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+}
+#population .item{
+    flex-direction: column;
+    text-align: center;
+    gap: .5em;
+}
+#population .item p{
+    width: max-content;
+}
+
 
 
 section:not(#population) .list{
     margin:1em;
-    padding-right: 1em;
-    height: 220px;
+    padding-right: .5em;
+    height: 300px;
     width: 600px;
 
     overflow-y: scroll;
