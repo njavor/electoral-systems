@@ -1,5 +1,5 @@
 function votes(voter){
-    return Math.random() < (voter.apathy/100);
+    return Math.random() > (voter.apathy/100);
 }
 
 
@@ -18,8 +18,9 @@ class FPTP{
 
     // election
     personal_vote(voter){
-        // if(votes(voter)){
+        if(votes(voter)){
         this.voteslist.push(voter.preference(this.candidates));
+        }
     }
     voting(){
         for(i in voters){
@@ -41,17 +42,25 @@ class FPTP{
         for(i in this.voteslist){
             resdatabase[this.voteslist[i]] += 1;
         }
+        let number_of_votes = resdatabase.reduce((a, b) => a + b, 0)
+
+
 
         // visualization
         let winnerInd = resdatabase.indexOf(Math.max(... resdatabase));
 
         console.log(resdatabase);
         let winnerelement = document.createElement("h3");
-        winnerelement.innerHTML = `\nEgyszerű többségi szavazás útján<br><br><span style="color:var(--link);">${candidates[winnerInd].name}</span><br><br>nyeri a választást<br><br>${resdatabase[winnerInd]} szavazattal`;
+        winnerelement.innerHTML = `\nEgyszerű többségi szavazás útján
+                                    <br><br><span style="color:var(--link);">${candidates[winnerInd].name}</span>
+                                    <br><br>nyeri a választást<br><br>${resdatabase[winnerInd]} szavazattal`;
+        let nov = document.createElement("p");
+        nov.innerHTML = `${number_of_votes} ment el szavazni a ${voters.length} szavazóból`
 
 
         let resvis = document.createElement("div");
         resvis.appendChild(winnerelement);
+        resvis.appendChild(nov);
 
         
         return resvis;
