@@ -9,7 +9,7 @@ class Voter{
         
         //beliefs
         this.compass = compass; // [0-99,0-99] (0,0)=LeftLiber, (99,99)=AuthRightű
-        
+
         this.pk = pk;
     }
 
@@ -21,16 +21,30 @@ class Voter{
 
 
 
-    party_preference(parties){
-        partylist = {};
-        for (party in parties){
-            partylist[party] = (Math.sqrt((party.compass[0]-this.compass[0])^2 + (party.compass[1]-this.compass[1])^2));
+    preference(list){
+        let preferencelist = []
+        for(i in list){
+            preferencelist.push(0);
         }
-        return partylist.sort(); // ??maybe reverse??
+
+        for (i in list){
+            preferencelist[i] = Math.abs(list[i].compass[0] - this.compass[0]) + Math.abs(list[i].compass[1] - this.compass[1]);
+            // preferencelist[i] = Math.sqrt((list[i].compass[0]-this.compass[0])^2 + (list[i].compass[1]-this.compass[1])^2)
+        }
+        return preferencelist.indexOf(Math.min(... preferencelist));
+    }
+}
+
+
+
+class Candidate{
+    constructor(name, compass, pk){
+        this.name = name
+        this.compass = compass // [x,y] 0-99
+        this.pk = pk
     }
 
-    
-    // static handshake(e,f){
-        
-    // }
+    deleteMe(){
+        delete this;
+    }
 }

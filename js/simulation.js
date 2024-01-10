@@ -4,8 +4,6 @@ partyadd.addEventListener("click", addParty);
 candidateadd.addEventListener("click", addCandidate);
 populationadd.addEventListener("click", addVoters);
 
-start.addEventListener("click", startSim);
-
 
 
 // Party
@@ -159,15 +157,15 @@ function addParty(){
 }
 
 function addCandidate(){
-    let candidate = new Party(candidatename.value, [candidate_x.value, candidate_y.value], candidate_num);
-    voters.push(candidate);
+    let candidate = new Candidate(candidatename.value, [candidate_x.value, candidate_y.value], candidate_num);
+    candidates.push(candidate);
     candidate_num += 1;
     
     addCandidateDisplay(candidate);
     candidateDeleteListener(candidate);
     
     
-    console.log(voters);
+    console.log(candidates);
 }
 
 function addVoters(){

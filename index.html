@@ -11,15 +11,16 @@
     <link rel="stylesheet" href="css/general.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/intro.css">
+
+    <link rel="stylesheet" href="css/dialogs.css">
 
     <!-- js -->
-    <script src="js/main.js" defer></script>
-
-    <script src="js/voting.js" defer></script>
     <script src="js/voter.js" defer></script>
     <script src="js/party.js" defer></script>
+    <script src="js/voting.js" defer></script>
     <script src="js/simulation.js" defer></script>
+    
+    <script src="js/main.js" defer></script>
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -97,7 +98,7 @@
             <div id="candidatelist" class="list"></div>
         </section>
 
-        <button id="start">VÁLASSZUNK</button>
+        <button id="startbtn">VÁLASSZUNK</button>
 
         <section id="population">
             <h3>Választók</h3>
@@ -140,6 +141,20 @@
     <footer>
         <a href="github.com/njavor" target="blank">njavor</a><p>,   2024</p>
     </footer>
+
+
+    <dialog id="resbox">
+        <h2>Választás eredménye</h2>
+        <div id="rescontent">
+
+        </div>
+        <div id="reschange">
+
+        </div>
+
+        <button id="resclose" class="material-symbols-outlined">close</button>
+    </dialog>
+
     <!-- <dialog id="introBox">
         <h1>Valami cím</h1>
 

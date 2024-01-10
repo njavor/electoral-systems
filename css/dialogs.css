@@ -1,3 +1,10 @@
+dialog[open]{
+    padding: 2em;
+
+    border: 0;
+    background-color: var(--feher);
+}
+
 #introBox[open]{
     padding: 3rem;
     height: calc(90svh - 6rem);
@@ -28,4 +35,39 @@
 .modal::backdrop{
     background-color: rgba(0 0 0 / .3);
     filter: blur(.4);
+}
+
+
+#resbox{
+    position: relative;
+    margin:auto;
+    width: 75%;
+    height: 75%;
+    
+    display: none;
+    grid-template-rows: fit-content(100%) 4fr 1fr;
+}
+#resbox[open]{
+    display: grid;
+}
+
+#resbox #rescontent{
+    padding: 2em;
+    margin: auto;
+}
+
+
+
+#resbox #resclose{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    font-weight: 800;
+}
+
+
+#resbox button.active{
+    background-color: var(--link);
+    color: var(--feher);
 }
