@@ -71,3 +71,10 @@ dialog[open]{
     background-color: var(--link);
     color: var(--feher);
 }
+
+
+#reschange{
+    display: flex;
+    justify-content: space-around;
+    height: min-content;
+}

@@ -83,7 +83,6 @@ button.material-symbols-outlined:hover{
     padding: 1em;
 
     display: flex;
-    flex-direction: column;
     gap: .5em;
 
     background-color: rgba(var(--rgb-kek), .3);

@@ -5,8 +5,8 @@ main{
 
     display: grid;
     grid-template-areas:
-    'parties title candidates'
-    'parties vote candidates'
+    'title candidates candidates'
+    'title candidates candidates'
     'population population population'
     ;
 
@@ -23,15 +23,17 @@ main section{
 
 
 #title{
+    margin-left: 10em;
+
     grid-area: title;
     align-self: center;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: baseline;
     justify-content: center;
 
-    text-align: center;
+    text-align: left;
 }
 #title h4{
     margin-bottom: -.3em;
@@ -42,10 +44,10 @@ main section{
     margin-top: .25em;
 }
 
-main > button{
+#title button{
+    margin-block: 2em;
     grid-area: vote;
     justify-self: center;
-    align-self: center;
     
     
     height: min-content;
@@ -76,7 +78,7 @@ section:not(#population) .list{
     margin:1em;
     padding-right: 1em;
     height: 220px;
-    width: 250px;
+    width: 500px;
 
     overflow-y: scroll;
 

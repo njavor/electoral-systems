@@ -34,7 +34,7 @@
 <body>
     <main>
         <section id="title">
-            <h4>szimulációs projektmunka</h4>
+            <h4>szimulációs projektmunka v0</h4>
             <h1>aránytalan urnák</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -42,33 +42,7 @@
                 quibusdam, nobis exercitationem voluptatem fugiat hic 
                 consectetur itaque modi omnis magnam? Illum, voluptatem suscipit.
             </p>
-        </section>
-
-        <section id="parties">
-            <h3>Pártok</h3>
-            <div id="partyform" class="form">
-                <div>
-                    <label for="partyname">név:</label>
-                    <input type="text" name="partyname" id="partyname" value="Egy Párt">
-                </div>
-
-                <div>
-                    <label for="">világnézet:</label>
-
-                    <div class="x">
-                        <label for="x">x (0-99)</label>
-                        <input type="number" name="party_x" id="party_x"  value="50" min="0" max="99">
-                    </div>
-                    <div class="y">
-                        <label for="y">y (0-99)</label>
-                        <input type="number" name="party_y" id="party_y"  value="50" min="0" max="99">
-                    </div>
-                </div>
-
-                <button type="submit" id="partyadd">Új párt</button>
-            </div>
-
-            <div id="partylist" class="list"></div>
+            <button id="startbtn">VÁLASSZUNK</button>
         </section>
         
         <section id="candidates">
@@ -98,7 +72,6 @@
             <div id="candidatelist" class="list"></div>
         </section>
 
-        <button id="startbtn">VÁLASSZUNK</button>
 
         <section id="population">
             <h3>Választók</h3>
@@ -154,16 +127,5 @@
 
         <button id="resclose" class="material-symbols-outlined">close</button>
     </dialog>
-
-    <!-- <dialog id="introBox">
-        <h1>Valami cím</h1>
-
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel recusandae odio corrupti ullam, alias consequuntur omnis. Ab facere modi eveniet eaque rerum veniam iste, consequuntur, est, similique odio quisquam numquam!
-            Pariatur molestias possimus praesentium! Dolore, voluptate. Doloremque, sunt voluptas. Aspernatur eos aut, qui perspiciatis, est fugiat quos sint, sunt eum voluptate quia at ut. Suscipit alias eveniet aliquid iusto culpa?
-        </p>
-
-        <button type="button" id="introClose">Irány választani!</button>
-    </dialog> -->
 </body>
 </html>

@@ -1,6 +1,6 @@
 // DISPLAY
 
-partyadd.addEventListener("click", addParty);
+// partyadd.addEventListener("click", addParty);
 candidateadd.addEventListener("click", addCandidate);
 populationadd.addEventListener("click", addVoters);
 
@@ -139,8 +139,8 @@ let partysystems = [];
 // candidate systems
 let first_past_the_post = new FPTP([],[]);
 let two_round = new TRS([],[]);
-let instant_runoff = new IRV([],[]);
-let candidatesystems = [first_past_the_post,two_round,instant_runoff];
+// let instant_runoff = new IRV([],[]);
+let candidatesystems = [first_past_the_post,two_round];
 
 
 
