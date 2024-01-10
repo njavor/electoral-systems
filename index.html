@@ -16,6 +16,7 @@
     <!-- js -->
     <script src="js/main.js" defer></script>
 
+    <script src="js/voting.js" defer></script>
     <script src="js/voter.js" defer></script>
     <script src="js/party.js" defer></script>
     <script src="js/simulation.js" defer></script>
@@ -25,46 +26,119 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;500;700;900&display=swap" rel="stylesheet">
 
+    <!-- icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 </head>
 <body>
     <main>
         <section id="title">
-            <h1>vote something</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            <h4>szimulációs projektmunka</h4>
+            <h1>aránytalan urnák</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Rerum, mollitia possimus optio velit commodi quis ipsam 
+                quibusdam, nobis exercitationem voluptatem fugiat hic 
+                consectetur itaque modi omnis magnam? Illum, voluptatem suscipit.
             </p>
         </section>
 
         <section id="parties">
             <h3>Pártok</h3>
-            <form action="" method="post">
-                <label for="name">név</label>
-                <input type="text" name="name" id="name">
+            <div id="partyform" class="form">
+                <div>
+                    <label for="partyname">név:</label>
+                    <input type="text" name="partyname" id="partyname" value="Egy Párt">
+                </div>
 
-                <label for="">ideológia</label>
-                <input type="number" name="x" id="x">
-                <input type="number" name="y" id="y">
+                <div>
+                    <label for="">világnézet:</label>
 
-                <button type="submit">Új párt</button>
-            </form>
-            <div id="partylist"></div>
+                    <div class="x">
+                        <label for="x">x (0-99)</label>
+                        <input type="number" name="party_x" id="party_x"  value="50" min="0" max="99">
+                    </div>
+                    <div class="y">
+                        <label for="y">y (0-99)</label>
+                        <input type="number" name="party_y" id="party_y"  value="50" min="0" max="99">
+                    </div>
+                </div>
+
+                <button type="submit" id="partyadd">Új párt</button>
+            </div>
+
+            <div id="partylist" class="list"></div>
         </section>
         
         <section id="candidates">
             <h3>Egyéni jelöltek</h3>
+            <div id="candidateform" class="form">
+                <div>
+                    <label for="candidatename">név:</label>
+                    <input type="text" name="candidatename" id="candidatename" value="Jelölt János">
+                </div>
+
+                <div>
+                    <label for="">világnézet:</label>
+
+                    <div class="x">
+                        <label for="x">x (0-99)</label>
+                        <input type="number" name="candidate_x" id="candidate_x"  value="50" min="0" max="99">
+                    </div>
+                    <div class="y">
+                        <label for="y">y (0-99)</label>
+                        <input type="number" name="candidate_y" id="candidate_y"  value="50" min="0" max="99">
+                    </div>
+                </div>
+
+                <button type="submit" id="candidateadd">Új egyéni jelölt</button>
+            </div>
             
-            <div id="candidatelist"></div>
+            <div id="candidatelist" class="list"></div>
         </section>
 
-        <button id="vote">VÁLASSZUNK</button>
+        <button id="start">VÁLASSZUNK</button>
 
         <section id="population">
             <h3>Választók</h3>
-            <div id="populationlist"></div>
+            <div id="populationform" class="form">
+                <div>
+                    <label for="votername">név:</label>
+                    <input type="text" name="votername" id="votername" value="centristák">
+                </div>
+
+                <div>
+                    <label for="">világnézet:</label>
+                    
+                    <div class="x">
+                        <label for="x">x (0-99)</label>
+                        <input type="number" name="voter_x" id="voter_x" value="49" min="0" max="99">
+                    </div>
+                    <div class="y">
+                        <label for="y">y (0-99)</label>
+                        <input type="number" name="voter_y" id="voter_y" value="49" min="0" max="99" >
+                    </div>
+                </div>
+                
+                <div>
+                    <label for="name">apátia (0-99):</label>
+                    <input type="number" name="voterapathy" id="voterapathy" value="40" min="0" max="99">
+                </div>
+
+                <div>
+                    <label for="">fő:</label>
+                    <input type="number" name="voternumber" id="voternumber" value="100">
+                </div>
+
+                <button type="submit" id="populationadd">Új választócsoport</button>
+            </div>
+
+            <div id="populationlist" class="list"></div>
         </section>
     </main>
     
     <footer>
-        njavor | 2023
+        <a href="github.com/njavor" target="blank">njavor</a><p>,   2024</p>
     </footer>
     <!-- <dialog id="introBox">
         <h1>Valami cím</h1>

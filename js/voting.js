@@ -2,13 +2,13 @@ function votes(voter){
     return Math.random() < (voter.apathy/100);
 }
 
-
+// FOR CANDIDATE
 // First past the post
 class FPTP{
-    constructor(date, parties, voters){
-        this.date = date;
-        this.parties = parties;
+    constructor(voters, parties, pk){
         this.voters = voters;
+        this.parties = parties;
+        this.pk = pk
 
         this.votes = [];
     }
@@ -32,35 +32,25 @@ class FPTP{
     }
 }
 
-// Two-round System
-class TRS{
-    constructor(date, parties, voters){
-        this.date = date;
-        this.parties = parties;
-        this.voters = voters;
+// // Two-round System
+// class TRS{
+//     constructor(voters, parties){
+//         this.voters = voters;
+//         this.parties = parties;
 
-        this.votes = [];
-    }
-}
+//         this.votes = [];
+//     }
+// }
 
-// Instant-runoff voting
-class IRV{
-    constructor(date, parties, voters){
-        this.date = date;
-        this.parties = parties;
-        this.voters = voters;
+// // Instant-runoff voting
+// class IRV{
+//     constructor(voters, parties){
+//         this.voters = voters;
+//         this.parties = parties;
 
-        this.votes = [];
-    }
-}
+//         this.votes = [];
+//     }
+// }
 
-// Single non-transferable vote
-class STV{
-    constructor(date, parties, voters){
-        this.date = date;
-        this.parties = parties;
-        this.voters = voters;
 
-        this.votes = [];
-    }
-}
+// FOR PARTY

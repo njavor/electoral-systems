@@ -5,5 +5,14 @@ footer{
     justify-content: center;
     align-items: center;
 
-    font-size: 10pt;
+    font-size: 8pt;
+}
+
+footer a{
+    text-decoration: none;
+    color: inherit;
+    transition: .1s;
+}
+footer a:hover{
+    color: var(--link);
 }

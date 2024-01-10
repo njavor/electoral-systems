@@ -1,7 +1,11 @@
 :root{
     --fekete: #111;
-    --feher: #eee;
-    --kek: #729EA1;
+    --feher: #fbffff;
+
+    --kek: #729ea1;
+    --rgb-kek: 114, 158, 161;
+
+    --link: #C83E4D;
 }
 *{
     margin:0;
@@ -15,6 +19,15 @@ html, body{
 body{
     display: flex;
     flex-direction: column;
+
+    background-color: var(--feher);
+
+    background-image: url(../assets/bg.gif);
+    background-size: cover;
+    background-position: center;
+
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
 }
 
 
@@ -26,6 +39,7 @@ h1,h2,h3,h4{
 h1{
     font-size: 32pt;
     text-align: center;
+    line-height: 100%;
 }
 h2{
     font-size: 26pt;
@@ -45,4 +59,60 @@ button{
     background-color: var(--kek);
 
     border:none;
+    cursor:pointer;
+
+    transition: .15s;
+}
+button:hover{
+    background-color: var(--fekete);
+    color: var(--feher);
+}
+
+button.material-symbols-outlined{
+    padding: 0;
+    background-color: transparent;
+    color: var(--link);
+}
+button.material-symbols-outlined:hover{
+    opacity: .7;
+}
+
+
+
+.form{
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+
+    background-color: rgba(var(--rgb-kek), .3);
+}
+.form > div{
+    display: grid;
+    grid-template-areas:
+    'label input1'
+    ;
+    gap: .5em;
+}
+
+.form > div:has(div:nth-child(3)){
+    grid-template-areas:
+    'label input1'
+    'label input2'
+    ;
+    
+}
+.form > div:not(:has(div:nth-child(3))) input{
+    align-self: center;
+}
+
+.form > div label{
+    grid-area: label;
+    align-self: center;
+}
+
+
+.form button{
+    font-size: 12pt;
 }

@@ -1,3 +1,5 @@
+<p style="font-size:26pt; color:red;">BEFEJEZETLEN<p>
+
 # Választási rendszerek
 
 Minden negyedik év tartogat egy fokozott jelentőségű vasárnapot. Ezen a vasárnapon egy fő feladata van minden magyar szavazókorú állampolgárnak. Szavazni.

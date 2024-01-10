@@ -3,13 +3,14 @@ function getRandomInt(max) {
 }
 
 class Voter{
-    constructor(name, charisma, apathy, compass){
+    constructor(name, apathy, compass, pk){
         this.name = name;
-        this.charisma = charisma;
         this.apathy = apathy; // 0 (nope) - 99 (biztos megy szavazni)
-
+        
         //beliefs
-        this.compass = compass; // [0-99,0-99] (0,0)=LeftLiber, (99,99)=AuthRight
+        this.compass = compass; // [0-99,0-99] (0,0)=LeftLiber, (99,99)=AuthRightű
+        
+        this.pk = pk;
     }
 
     
