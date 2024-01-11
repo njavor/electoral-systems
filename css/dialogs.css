@@ -68,8 +68,8 @@ dialog[open]{
 
 
 #resbox button.active{
-    background-color: var(--link);
-    color: var(--feher);
+    background-color: var(--highlight);
+    color: var(--fekete);
 }
 
 

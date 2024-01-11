@@ -1,9 +1,10 @@
 footer{
-    margin-block: 10px 5px;
+    padding: 10px 1% 5px 1%;
     height: 20px;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
+    gap: 3em;
 
     font-size: 8pt;
 }
