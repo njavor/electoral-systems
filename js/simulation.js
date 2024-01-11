@@ -13,7 +13,7 @@ function addPartyDisplay(party){
     element.classList.add("item");
 
     var text = document.createElement("p");
-    text.appendChild(document.createTextNode(`${party.name} (${party.compass[0]};${party.compass[1]})`));
+    text.appendChild(document.createTextNode(`${party.name} (${party.compass[0]},${party.compass[1]})`));
 
     var delbutton = document.createElement("button");
     delbutton.setAttribute('id', `party-${party.pk}-delete`);
@@ -46,7 +46,7 @@ function addCandidateDisplay(candidate){
     element.classList.add("item");
 
     var text = document.createElement("p");
-    text.appendChild(document.createTextNode(`${candidate.name} (${candidate.compass[0]};${candidate.compass[1]})`));
+    text.appendChild(document.createTextNode(`${candidate.name} (${candidate.compass[0]},${candidate.compass[1]})`));
 
     var delbutton = document.createElement("button");
     delbutton.setAttribute('id', `candidate-${candidate.pk}-delete`);
@@ -80,7 +80,7 @@ function addVotersDisplay(pop, i){
     element.classList.add("item");
 
     var text = document.createElement("p");
-    text.innerHTML = `<strong>${pop.name} (${pop.compass[0]};${pop.compass[1]})</strong> <br> apátia:${pop.apathy} <br> ${i} fő`;
+    text.innerHTML = `<strong>${pop.name} (${pop.compass[0]},${pop.compass[1]})</strong> <br> apátia:${pop.apathy} <br> ${i} fő`;
 
     var delbutton = document.createElement("button");
     delbutton.setAttribute('id', `pop-${pop.pk}-delete`);
@@ -133,7 +133,14 @@ let party_num = 0;
 let candidates = [];
 let candidate_num = 0;
 
+// party systems
+let partysystems = [];
 
+// candidate systems
+let first_past_the_post = new FPTP([],[]);
+let two_round = new TRS([],[]);
+// let instant_runoff = new IRV([],[]);
+let candidatesystems = [first_past_the_post,two_round];
 
 
 

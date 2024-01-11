@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>aránytalan urnák</title>
+    <title>Szavazzunk</title>
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="assets/how_to_vote_FILL0_wght400_GRAD0_opsz24.png" type="image/x-icon">
 
     <!-- css -->
     <link rel="stylesheet" href="css/general.css">
@@ -19,8 +17,7 @@
     <!-- js -->
     <script src="js/voter.js" defer></script>
     <script src="js/party.js" defer></script>
-    <script src="js/votingSystems.js" defer></script>
-    <script src="js/election.js" defer></script>
+    <script src="js/voting.js" defer></script>
     <script src="js/simulation.js" defer></script>
     
     <script src="js/main.js" defer></script>
@@ -49,7 +46,7 @@
         </section>
         
         <section id="candidates">
-            <h3>Jelöltek</h3>
+            <h3>Egyéni jelöltek</h3>
             <div id="candidateform" class="form">
                 <div>
                     <label for="candidatename">név:</label>
@@ -77,7 +74,7 @@
 
 
         <section id="population">
-            <h3>Választócsoportok</h3>
+            <h3>Választók</h3>
             <div id="populationform" class="form">
                 <div>
                     <label for="votername">név:</label>
@@ -115,19 +112,17 @@
     </main>
     
     <footer>
-        <p></p><p><a href="https://www.github.com/njavor" target="blank">njavor</a> · 2024</p> <a href="https://www.github.com/njavor/electoral-systems" target="_blank">github</a>
+        <a href="https://www.github.com/njavor" target="blank">njavor</a><p>,   2024</p>
     </footer>
 
 
     <dialog id="resbox">
         <h2>Választás eredménye</h2>
         <div id="rescontent">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, optio perspiciatis ducimus voluptatum aliquid fugit illo doloribus quas nihil autem qui ut. Accusantium assumenda exercitationem, similique possimus accusamus rem perferendis.</p>
+
         </div>
         <div id="reschange">
-            <button id="FPTP" title="First past the post / Egyszerű többségi rendszer">FPTP</button>
-            <button id="TRS" title="Two-round system / Kétfordulós szavazás">TRS</button>
-            <button id="IRV" title="Instant-runoff voting / Azonnali többfordulós szavazás">IRV</button>
+
         </div>
 
         <button id="resclose" class="material-symbols-outlined">close</button>
